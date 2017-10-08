@@ -99,3 +99,7 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# customized
+*.sqlite3
+/backend/*/migrations/

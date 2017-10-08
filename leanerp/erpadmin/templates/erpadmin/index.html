@@ -1,0 +1,51 @@
+{% extends 'control_panel/base.html' %}
+{% load staticfiles %}
+{% load notifications_tags %}
+
+{% block css_content %}
+
+<style>
+.bar {
+  fill: steelblue;
+}
+.bar:hover {
+  fill: brown;
+}
+.axis--x path {
+  display: none;
+}
+</style>
+
+{% endblock %}
+
+{% block page_content %}
+    <div class="container-fluid">
+        <div class="row-fuild">
+            <div class="col-md-6 col-xs-12">
+                <h4 class="page-header">歡迎</h4>
+                <div class="alert alert-info">
+                    <strong>{{ welcome_msg }}</strong>.
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <h4 class="page-header">提醒</h4>
+                <div class="alert alert-warning">
+                    有 <strong>{% notifications_unread %}</strong> 則未讀訊息.
+                </div>
+                <div class="alert alert-warning">
+                    有 <strong>{{ num_of_tickets }}</strong> 未處理事項.
+                    <a href="/user/helpdesk/dashboard/">跟進我的未處理事項</a>
+                </div>
+                {% if latest_sync_date is not None %}
+                <div class="alert alert-warning">
+                    目前資料同步日期為 <strong>{{ latest_sync_date|date:"Y-m-d g:i A" }}</strong>, 距今 <strong>{{latest_sync_days}} 天 {{ latest_sync_hours }} 小時 {{ latest_sync_minutes }} 分鐘前</strong>
+                </div>
+                {% endif %}
+            <div>
+        <div>
+    <div>
+{% endblock %}
+
+{% block javascript_content %}
+
+{% endblock %}

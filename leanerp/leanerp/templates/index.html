@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>企業名稱</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/signin.css' %}"/>
+        <!-- for boostrap responsive page -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+            <div class="col-xs-12">
+                <form class="form-signin" action="" method="post">
+                    <h2 class="form-signin-heading" style="text-align: center;margin-bottom:20px;">企業名稱</h2>
+                    {% if request.user.is_authenticated %}
+                        <p>
+                            {{request.user}} 您已經登入囉~可以進行以下動作:
+                            <a href="/logout/">登出</a>
+                        </p>
+                    {% else %}
+                        {% csrf_token %}
+                        <input class="form-control" type="text" name="username" value="" id="username" placeholder="用戶名稱" style="margin-bottom:20px;">
+                        <input class="form-control" type="password" name="password" value="" id="password" placeholder="用戶密碼" style="margin-bottom:20px;">
+                        <button class="btn btn-lg btn-primary btn-block" type="submit" name="login" value="login" style="margin-bottom:20px;">登入</button>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit" name="register" value="register" style="margin-bottom:20px; background: green;">註冊</button>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
