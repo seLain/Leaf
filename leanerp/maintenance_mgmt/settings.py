@@ -9,7 +9,6 @@ __author__ = "Victor Hu"
 __copyright__ = "Copyright (C) 2017 Lee Fong Int'l Group, Inc, Macau"
 __license__ = "Lee Fong Int'l Group"
 
-from django.apps import AppConfig
+ADV_IMAGE_BASE = 'media/maintain_images/'
+DEFAULT_IMAGE = ADV_IMAGE_BASE + 'None/no-img.jpg'
 
-class MaintenanceMgmtConfig(AppConfig):
-    name = 'maintenance_mgmt'
