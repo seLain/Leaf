@@ -2,7 +2,7 @@ from django.db import models
 from datetime import datetime
 from django.utils import timezone
 
-from sellstats.models import Supplier
+from erpadmin.models import Supplier
 
 from .settings import ADV_IMAGE_BASE, DEFAULT_IMAGE
 
