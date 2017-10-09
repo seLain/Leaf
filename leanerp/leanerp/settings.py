@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # erp modules
     'erpadmin',
+    'maintenance_mgmt',
 ]
 
 MIDDLEWARE = [
