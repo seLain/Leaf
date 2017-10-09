@@ -1,0 +1,2291 @@
+# django-helpdesk English language translation
+# Copyright (C) 2011 Ross Poulton
+# This file is distributed under the same license as the django-helpdesk
+# package.
+#
+# Translators: Victor Hu <selain@nature.ee.ncku.edu.tw>
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version:  django-helpdesk\n"
+"Report-Msgid-Bugs-To: http://github.com/RossP/django-helpdesk/issues\n"
+"POT-Creation-Date: 2017-06-01 16:13+0800\n"
+"PO-Revision-Date: 2014-08-01 09:58+0000\n"
+"Last-Translator: Victor Hu <selain@nature.ee.ncku.edu.tw>\n"
+"Language: zh_Hant_TW\n"
+"Language-Team: Chinese (Taiwan) \n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.4.0\n"
+
+#: helpdesk/admin.py:29 helpdesk/models.py:404
+msgid "Submitter E-Mail"
+msgstr ""
+
+#: helpdesk/forms.py:139 helpdesk/models.py:269 helpdesk/models.py:388
+#: helpdesk/views/staff.py:1180 helpdesk/views/staff.py:1186
+#: helpdesk/views/staff.py:1192 helpdesk/views/staff.py:1198
+msgid "Queue"
+msgstr ""
+
+#: helpdesk/forms.py:148
+msgid "Summary of the problem"
+msgstr ""
+
+#: helpdesk/forms.py:153
+msgid "Description of your issue"
+msgstr ""
+
+#: helpdesk/forms.py:155
+msgid "Please be as descriptive as possible and include all details"
+msgstr ""
+
+#: helpdesk/forms.py:163 helpdesk/management/commands/escalate_tickets.py:156
+#: helpdesk/models.py:447 helpdesk/views/staff.py:498
+msgid "Priority"
+msgstr ""
+
+#: helpdesk/forms.py:164
+msgid "Please select a priority carefully. If unsure, leave it as '3'."
+msgstr ""
+
+#: helpdesk/forms.py:170 helpdesk/models.py:455 helpdesk/views/staff.py:508
+msgid "Due on"
+msgstr ""
+
+#: helpdesk/forms.py:175
+msgid "Attach File"
+msgstr ""
+
+#: helpdesk/forms.py:176
+msgid "You can attach a file such as a document or screenshot to this ticket."
+msgstr ""
+
+#: helpdesk/forms.py:299
+msgid "Submitter E-Mail Address"
+msgstr ""
+
+#: helpdesk/forms.py:301
+msgid ""
+"This e-mail address will receive copies of all public updates to this "
+"ticket."
+msgstr ""
+
+#: helpdesk/forms.py:309
+msgid "Case owner"
+msgstr ""
+
+#: helpdesk/forms.py:310
+msgid ""
+"If you select an owner other than yourself, they'll be e-mailed details "
+"of this ticket immediately."
+msgstr ""
+
+#: helpdesk/forms.py:338
+#, python-format
+msgid "Ticket Opened & Assigned to %(name)s"
+msgstr ""
+
+#: helpdesk/forms.py:339
+msgid "<invalid user>"
+msgstr ""
+
+#: helpdesk/forms.py:342
+msgid "Ticket Opened"
+msgstr ""
+
+#: helpdesk/forms.py:362
+msgid "Your E-Mail Address"
+msgstr ""
+
+#: helpdesk/forms.py:363
+msgid "We will e-mail you when your ticket is updated."
+msgstr ""
+
+#: helpdesk/forms.py:384
+msgid "Ticket Opened Via Web"
+msgstr ""
+
+#: helpdesk/forms.py:397
+msgid "Show Ticket List on Login?"
+msgstr ""
+
+#: helpdesk/forms.py:398
+msgid "Display the ticket list upon login? Otherwise, the dashboard is shown."
+msgstr ""
+
+#: helpdesk/forms.py:403
+msgid "E-mail me on ticket change?"
+msgstr ""
+
+#: helpdesk/forms.py:404
+msgid ""
+"If you're the ticket owner and the ticket is changed via the web by "
+"somebody else, do you want to receive an e-mail?"
+msgstr ""
+
+#: helpdesk/forms.py:409
+msgid "E-mail me when assigned a ticket?"
+msgstr ""
+
+#: helpdesk/forms.py:410
+msgid ""
+"If you are assigned a ticket via the web, do you want to receive an "
+"e-mail?"
+msgstr ""
+
+#: helpdesk/forms.py:415
+msgid "Number of tickets to show per page"
+msgstr ""
+
+#: helpdesk/forms.py:416
+msgid "How many tickets do you want to see on the Ticket List page?"
+msgstr ""
+
+#: helpdesk/forms.py:422
+msgid "Use my e-mail address when submitting tickets?"
+msgstr ""
+
+#: helpdesk/forms.py:423
+msgid ""
+"When you submit a ticket, do you want to automatically use your e-mail "
+"address as the submitter address? You can type a different e-mail address"
+" when entering the ticket if needed, this option only changes the "
+"default."
+msgstr ""
+
+#: helpdesk/models.py:33 helpdesk/models.py:382 helpdesk/models.py:636
+#: helpdesk/models.py:942 helpdesk/models.py:979 helpdesk/views/staff.py:470
+msgid "Title"
+msgstr ""
+
+#: helpdesk/models.py:38 helpdesk/models.py:947 helpdesk/models.py:1334
+msgid "Slug"
+msgstr ""
+
+#: helpdesk/models.py:41
+msgid ""
+"This slug is used when building ticket ID's. Once set, try not to change "
+"it or e-mailing may get messy."
+msgstr ""
+
+#: helpdesk/models.py:46 helpdesk/models.py:1180 helpdesk/models.py:1251
+#: helpdesk/models.py:1331
+msgid "E-Mail Address"
+msgstr ""
+
+#: helpdesk/models.py:49
+msgid ""
+"All outgoing e-mails for this queue will use this e-mail address. If you "
+"use IMAP or POP3, this should be the e-mail address for that mailbox."
+msgstr ""
+
+#: helpdesk/models.py:55 helpdesk/models.py:918
+msgid "Locale"
+msgstr ""
+
+#: helpdesk/models.py:59
+msgid ""
+"Locale of this queue. All correspondence in this queue will be in this "
+"language."
+msgstr ""
+
+#: helpdesk/models.py:64
+msgid "Allow Public Submission?"
+msgstr ""
+
+#: helpdesk/models.py:67
+msgid "Should this queue be listed on the public submission form?"
+msgstr ""
+
+#: helpdesk/models.py:71
+msgid "Allow E-Mail Submission?"
+msgstr ""
+
+#: helpdesk/models.py:74
+msgid "Do you want to poll the e-mail box below for new tickets?"
+msgstr ""
+
+#: helpdesk/models.py:79
+msgid "Escalation Days"
+msgstr ""
+
+#: helpdesk/models.py:82
+msgid ""
+"For tickets which are not held, how often do you wish to increase their "
+"priority? Set to 0 for no escalation."
+msgstr ""
+
+#: helpdesk/models.py:87
+msgid "New Ticket CC Address"
+msgstr ""
+
+#: helpdesk/models.py:91
+msgid ""
+"If an e-mail address is entered here, then it will receive notification "
+"of all new tickets created for this queue. Enter a comma between multiple"
+" e-mail addresses."
+msgstr ""
+
+#: helpdesk/models.py:97
+msgid "Updated Ticket CC Address"
+msgstr ""
+
+#: helpdesk/models.py:101
+msgid ""
+"If an e-mail address is entered here, then it will receive notification "
+"of all activity (new tickets, closed tickets, updates, reassignments, "
+"etc) for this queue. Separate multiple addresses with a comma."
+msgstr ""
+
+#: helpdesk/models.py:108
+msgid "E-Mail Box Type"
+msgstr ""
+
+#: helpdesk/models.py:110
+msgid "POP 3"
+msgstr ""
+
+#: helpdesk/models.py:110
+msgid "IMAP"
+msgstr ""
+
+#: helpdesk/models.py:110
+msgid "Local Directory"
+msgstr ""
+
+#: helpdesk/models.py:113
+msgid ""
+"E-Mail server type for creating tickets automatically from a mailbox - "
+"both POP3 and IMAP are supported, as well as reading from a local "
+"directory."
+msgstr ""
+
+#: helpdesk/models.py:119
+msgid "E-Mail Hostname"
+msgstr ""
+
+#: helpdesk/models.py:123
+msgid ""
+"Your e-mail server address - either the domain name or IP address. May be"
+" \"localhost\"."
+msgstr ""
+
+#: helpdesk/models.py:128
+msgid "E-Mail Port"
+msgstr ""
+
+#: helpdesk/models.py:131
+msgid ""
+"Port number to use for accessing e-mail. Default for POP3 is \"110\", and"
+" for IMAP is \"143\". This may differ on some servers. Leave it blank to "
+"use the defaults."
+msgstr ""
+
+#: helpdesk/models.py:137
+msgid "Use SSL for E-Mail?"
+msgstr ""
+
+#: helpdesk/models.py:140
+msgid ""
+"Whether to use SSL for IMAP or POP3 - the default ports when using SSL "
+"are 993 for IMAP and 995 for POP3."
+msgstr ""
+
+#: helpdesk/models.py:145
+msgid "E-Mail Username"
+msgstr ""
+
+#: helpdesk/models.py:149
+msgid "Username for accessing this mailbox."
+msgstr ""
+
+#: helpdesk/models.py:153
+msgid "E-Mail Password"
+msgstr ""
+
+#: helpdesk/models.py:157
+msgid "Password for the above username"
+msgstr ""
+
+#: helpdesk/models.py:161
+msgid "IMAP Folder"
+msgstr ""
+
+#: helpdesk/models.py:165
+msgid ""
+"If using IMAP, what folder do you wish to fetch messages from? This "
+"allows you to use one IMAP account for multiple queues, by filtering "
+"messages on your IMAP server into separate folders. Default: INBOX."
+msgstr ""
+
+#: helpdesk/models.py:172
+msgid "E-Mail Local Directory"
+msgstr ""
+
+#: helpdesk/models.py:176
+msgid ""
+"If using a local directory, what directory path do you wish to poll for "
+"new email? Example: /var/lib/mail/helpdesk/"
+msgstr ""
+
+#: helpdesk/models.py:182
+msgid "Django auth permission name"
+msgstr ""
+
+#: helpdesk/models.py:187
+msgid "Name used in the django.contrib.auth permission system"
+msgstr ""
+
+#: helpdesk/models.py:191
+msgid "E-Mail Check Interval"
+msgstr ""
+
+#: helpdesk/models.py:192
+msgid "How often do you wish to check this mailbox? (in Minutes)"
+msgstr ""
+
+#: helpdesk/models.py:206
+msgid "Socks Proxy Type"
+msgstr ""
+
+#: helpdesk/models.py:208
+msgid "SOCKS4"
+msgstr ""
+
+#: helpdesk/models.py:208
+msgid "SOCKS5"
+msgstr ""
+
+#: helpdesk/models.py:211
+msgid ""
+"SOCKS4 or SOCKS5 allows you to proxy your connections through a SOCKS "
+"server."
+msgstr ""
+
+#: helpdesk/models.py:215
+msgid "Socks Proxy Host"
+msgstr ""
+
+#: helpdesk/models.py:218
+msgid "Socks proxy IP address. Default: 127.0.0.1"
+msgstr ""
+
+#: helpdesk/models.py:222
+msgid "Socks Proxy Port"
+msgstr ""
+
+#: helpdesk/models.py:225
+msgid "Socks proxy port number. Default: 9150 (default TOR port)"
+msgstr ""
+
+#: helpdesk/models.py:229
+msgid "Logging Type"
+msgstr ""
+
+#: helpdesk/models.py:232
+msgid "None"
+msgstr ""
+
+#: helpdesk/models.py:233
+msgid "Debug"
+msgstr ""
+
+#: helpdesk/models.py:234
+msgid "Information"
+msgstr ""
+
+#: helpdesk/models.py:235
+msgid "Warning"
+msgstr ""
+
+#: helpdesk/models.py:236
+msgid "Error"
+msgstr ""
+
+#: helpdesk/models.py:237
+msgid "Critical"
+msgstr ""
+
+#: helpdesk/models.py:241
+msgid ""
+"Set the default logging level. All messages at that level or above will "
+"be logged to the directory set below. If no level is set, logging will be"
+" disabled."
+msgstr ""
+
+#: helpdesk/models.py:247
+msgid "Logging Directory"
+msgstr ""
+
+#: helpdesk/models.py:251
+msgid ""
+"If logging is enabled, what directory should we use to store log files "
+"for this queue? If no directory is set, default to /var/log/helpdesk/"
+msgstr ""
+
+#: helpdesk/models.py:261
+msgid "Default owner"
+msgstr ""
+
+#: helpdesk/models.py:270
+msgid "Queues"
+msgstr ""
+
+#: helpdesk/management/commands/create_queue_permissions.py:69
+#: helpdesk/migrations/0009_migrate_queuemembership.py:30
+#: helpdesk/models.py:322
+msgid "Permission for queue: "
+msgstr ""
+
+#: helpdesk/models.py:366
+msgid "Open"
+msgstr ""
+
+#: helpdesk/models.py:367
+msgid "Reopened"
+msgstr ""
+
+#: helpdesk/models.py:368
+msgid "Resolved"
+msgstr ""
+
+#: helpdesk/models.py:369
+msgid "Closed"
+msgstr ""
+
+#: helpdesk/models.py:370
+msgid "Duplicate"
+msgstr ""
+
+#: helpdesk/models.py:374
+msgid "1. Critical"
+msgstr ""
+
+#: helpdesk/models.py:375
+msgid "2. High"
+msgstr ""
+
+#: helpdesk/models.py:376
+msgid "3. Normal"
+msgstr ""
+
+#: helpdesk/models.py:377
+msgid "4. Low"
+msgstr ""
+
+#: helpdesk/models.py:378
+msgid "5. Very Low"
+msgstr ""
+
+#: helpdesk/models.py:392
+msgid "Created"
+msgstr ""
+
+#: helpdesk/models.py:394
+msgid "Date this ticket was first created"
+msgstr ""
+
+#: helpdesk/models.py:398
+msgid "Modified"
+msgstr ""
+
+#: helpdesk/models.py:400
+msgid "Date this ticket was most recently changed."
+msgstr ""
+
+#: helpdesk/models.py:407
+msgid ""
+"The submitter will receive an email for all public follow-ups left for "
+"this task."
+msgstr ""
+
+#: helpdesk/models.py:416
+msgid "Assigned to"
+msgstr ""
+
+#: helpdesk/models.py:420 helpdesk/views/staff.py:480
+msgid "Status"
+msgstr ""
+
+#: helpdesk/models.py:426
+msgid "On Hold"
+msgstr ""
+
+#: helpdesk/models.py:429
+msgid "If a ticket is on hold, it will not automatically be escalated."
+msgstr ""
+
+#: helpdesk/models.py:433 helpdesk/models.py:951
+msgid "Description"
+msgstr ""
+
+#: helpdesk/models.py:436
+msgid "The content of the customers query."
+msgstr ""
+
+#: helpdesk/models.py:440
+msgid "Resolution"
+msgstr ""
+
+#: helpdesk/models.py:443
+msgid "The resolution provided to the customer by our staff."
+msgstr ""
+
+#: helpdesk/models.py:451
+msgid "1 = Highest Priority, 5 = Low Priority"
+msgstr ""
+
+#: helpdesk/models.py:464
+msgid ""
+"The date this ticket was last escalated - updated automatically by "
+"management/commands/escalate_tickets.py."
+msgstr ""
+
+#: helpdesk/models.py:473 helpdesk/views/feeds.py:93
+#: helpdesk/views/feeds.py:118 helpdesk/views/feeds.py:170
+#: helpdesk/views/staff.py:442
+msgid "Unassigned"
+msgstr ""
+
+#: helpdesk/models.py:513
+msgid " - On Hold"
+msgstr ""
+
+#: helpdesk/models.py:516
+msgid " - Open dependencies"
+msgstr ""
+
+#: helpdesk/models.py:571 helpdesk/models.py:627 helpdesk/models.py:1239
+#: helpdesk/models.py:1413 helpdesk/models.py:1446
+msgid "Ticket"
+msgstr ""
+
+#: helpdesk/models.py:572
+msgid "Tickets"
+msgstr ""
+
+#: helpdesk/models.py:631 helpdesk/models.py:862 helpdesk/models.py:1173
+#: helpdesk/models.py:1328
+msgid "Date"
+msgstr ""
+
+#: helpdesk/models.py:643 helpdesk/views/staff.py:459
+msgid "Comment"
+msgstr ""
+
+#: helpdesk/models.py:649
+msgid "Public"
+msgstr ""
+
+#: helpdesk/models.py:652
+msgid ""
+"Public tickets are viewable by the submitter and all staff, but non-"
+"public tickets can only be seen by staff."
+msgstr ""
+
+#: helpdesk/models.py:660 helpdesk/models.py:1048 helpdesk/models.py:1247
+#: helpdesk/views/staff.py:1155 helpdesk/views/staff.py:1161
+#: helpdesk/views/staff.py:1168 helpdesk/views/staff.py:1174
+msgid "User"
+msgstr ""
+
+#: helpdesk/models.py:664
+msgid "New Status"
+msgstr ""
+
+#: helpdesk/models.py:668
+msgid "If the status was changed, what was it changed to?"
+msgstr ""
+
+#: helpdesk/models.py:675 helpdesk/models.py:700 helpdesk/models.py:762
+msgid "Follow-up"
+msgstr ""
+
+#: helpdesk/models.py:676
+msgid "Follow-ups"
+msgstr ""
+
+#: helpdesk/models.py:704 helpdesk/models.py:1418
+msgid "Field"
+msgstr ""
+
+#: helpdesk/models.py:709
+msgid "Old Value"
+msgstr ""
+
+#: helpdesk/models.py:715
+msgid "New Value"
+msgstr ""
+
+#: helpdesk/models.py:723
+msgid "removed"
+msgstr ""
+
+#: helpdesk/models.py:725
+#, python-format
+msgid "set to %s"
+msgstr ""
+
+#: helpdesk/models.py:727
+#, python-format
+msgid "changed from \"%(old_value)s\" to \"%(new_value)s\""
+msgstr ""
+
+#: helpdesk/models.py:734
+msgid "Ticket change"
+msgstr ""
+
+#: helpdesk/models.py:735
+msgid "Ticket changes"
+msgstr ""
+
+#: helpdesk/models.py:766
+msgid "File"
+msgstr ""
+
+#: helpdesk/models.py:772
+msgid "Filename"
+msgstr ""
+
+#: helpdesk/models.py:777
+msgid "MIME Type"
+msgstr ""
+
+#: helpdesk/models.py:782
+msgid "Size"
+msgstr ""
+
+#: helpdesk/models.py:783
+msgid "Size of this file in bytes"
+msgstr ""
+
+#: helpdesk/models.py:791
+msgid "Attachment"
+msgstr ""
+
+#: helpdesk/models.py:792
+msgid "Attachments"
+msgstr ""
+
+#: helpdesk/models.py:809
+msgid "Pre-set reply"
+msgstr ""
+
+#: helpdesk/models.py:810
+msgid "Pre-set replies"
+msgstr ""
+
+#: helpdesk/models.py:815
+msgid ""
+"Leave blank to allow this reply to be used for all queues, or select "
+"those queues you wish to limit this reply to."
+msgstr ""
+
+#: helpdesk/models.py:820 helpdesk/models.py:857 helpdesk/models.py:1168
+msgid "Name"
+msgstr ""
+
+#: helpdesk/models.py:822
+msgid "Only used to assist users with selecting a reply - not shown to the user."
+msgstr ""
+
+#: helpdesk/models.py:827
+msgid "Body"
+msgstr ""
+
+#: helpdesk/models.py:828
+msgid ""
+"Context available: {{ ticket }} - ticket object (eg {{ ticket.title }}); "
+"{{ queue }} - The queue; and {{ user }} - the current user."
+msgstr ""
+
+#: helpdesk/models.py:852
+msgid ""
+"Leave blank for this exclusion to be applied to all queues, or select "
+"those queues you wish to exclude with this entry."
+msgstr ""
+
+#: helpdesk/models.py:863
+msgid "Date on which escalation should not happen"
+msgstr ""
+
+#: helpdesk/models.py:870
+msgid "Escalation exclusion"
+msgstr ""
+
+#: helpdesk/models.py:871
+msgid "Escalation exclusions"
+msgstr ""
+
+#: helpdesk/models.py:885
+msgid "Template Name"
+msgstr ""
+
+#: helpdesk/models.py:890
+msgid "Subject"
+msgstr ""
+
+#: helpdesk/models.py:892
+msgid ""
+"This will be prefixed with \"[ticket.ticket] ticket.title\". We recommend"
+" something simple such as \"(Updated\") or \"(Closed)\" - the same "
+"context is available as in plain_text, below."
+msgstr ""
+
+#: helpdesk/models.py:898
+msgid "Heading"
+msgstr ""
+
+#: helpdesk/models.py:900
+msgid ""
+"In HTML e-mails, this will be the heading at the top of the email - the "
+"same context is available as in plain_text, below."
+msgstr ""
+
+#: helpdesk/models.py:906
+msgid "Plain Text"
+msgstr ""
+
+#: helpdesk/models.py:907
+msgid ""
+"The context available to you includes {{ ticket }}, {{ queue }}, and "
+"depending on the time of the call: {{ resolution }} or {{ comment }}."
+msgstr ""
+
+#: helpdesk/models.py:913
+msgid "HTML"
+msgstr ""
+
+#: helpdesk/models.py:914
+msgid "The same context is available here as in plain_text, above."
+msgstr ""
+
+#: helpdesk/models.py:922
+msgid "Locale of this template."
+msgstr ""
+
+#: helpdesk/models.py:930
+msgid "e-mail template"
+msgstr ""
+
+#: helpdesk/models.py:931
+msgid "e-mail templates"
+msgstr ""
+
+#: helpdesk/models.py:959
+msgid "Knowledge base category"
+msgstr ""
+
+#: helpdesk/models.py:960
+msgid "Knowledge base categories"
+msgstr ""
+
+#: helpdesk/models.py:975
+msgid "Category"
+msgstr ""
+
+#: helpdesk/models.py:984
+msgid "Question"
+msgstr ""
+
+#: helpdesk/models.py:988
+msgid "Answer"
+msgstr ""
+
+#: helpdesk/models.py:992
+msgid "Votes"
+msgstr ""
+
+#: helpdesk/models.py:993
+msgid "Total number of votes cast for this item"
+msgstr ""
+
+#: helpdesk/models.py:998
+msgid "Positive Votes"
+msgstr ""
+
+#: helpdesk/models.py:999
+msgid "Number of votes for this item which were POSITIVE."
+msgstr ""
+
+#: helpdesk/models.py:1004
+msgid "Last Updated"
+msgstr ""
+
+#: helpdesk/models.py:1005
+msgid "The date on which this question was most recently changed."
+msgstr ""
+
+#: helpdesk/models.py:1018
+msgid "Unrated"
+msgstr ""
+
+#: helpdesk/models.py:1026
+msgid "Knowledge base item"
+msgstr ""
+
+#: helpdesk/models.py:1027
+msgid "Knowledge base items"
+msgstr ""
+
+#: helpdesk/models.py:1052
+msgid "Query Name"
+msgstr ""
+
+#: helpdesk/models.py:1054
+msgid "User-provided name for this query"
+msgstr ""
+
+#: helpdesk/models.py:1058
+msgid "Shared With Other Users?"
+msgstr ""
+
+#: helpdesk/models.py:1061
+msgid "Should other users see this query?"
+msgstr ""
+
+#: helpdesk/models.py:1065
+msgid "Search Query"
+msgstr ""
+
+#: helpdesk/models.py:1066
+msgid "Pickled query object. Be wary changing this."
+msgstr ""
+
+#: helpdesk/models.py:1076
+msgid "Saved search"
+msgstr ""
+
+#: helpdesk/models.py:1077
+msgid "Saved searches"
+msgstr ""
+
+#: helpdesk/models.py:1095
+msgid "Settings Dictionary"
+msgstr ""
+
+#: helpdesk/models.py:1096
+msgid ""
+"This is a base64-encoded representation of a pickled Python dictionary. "
+"Do not change this field via the admin."
+msgstr ""
+
+#: helpdesk/models.py:1129
+msgid "User Setting"
+msgstr ""
+
+#: helpdesk/models.py:1130
+msgid "User Settings"
+msgstr ""
+
+#: helpdesk/models.py:1157
+msgid "Ignored e-mail address"
+msgstr ""
+
+#: helpdesk/models.py:1158
+msgid "Ignored e-mail addresses"
+msgstr ""
+
+#: helpdesk/models.py:1163
+msgid ""
+"Leave blank for this e-mail to be ignored on all queues, or select those "
+"queues you wish to ignore this e-mail for."
+msgstr ""
+
+#: helpdesk/models.py:1174
+msgid "Date on which this e-mail address was added"
+msgstr ""
+
+#: helpdesk/models.py:1182
+msgid ""
+"Enter a full e-mail address, or portions with wildcards, eg *@domain.com "
+"or postmaster@*."
+msgstr ""
+
+#: helpdesk/models.py:1187
+msgid "Save Emails in Mailbox?"
+msgstr ""
+
+#: helpdesk/models.py:1190
+msgid ""
+"Do you want to save emails from this address in the mailbox? If this is "
+"unticked, emails from this address will be deleted."
+msgstr ""
+
+#: helpdesk/models.py:1246
+msgid "User who wishes to receive updates for this ticket."
+msgstr ""
+
+#: helpdesk/models.py:1254
+msgid "For non-user followers, enter their e-mail address"
+msgstr ""
+
+#: helpdesk/models.py:1258
+msgid "Can View Ticket?"
+msgstr ""
+
+#: helpdesk/models.py:1261
+msgid "Can this CC login to view the ticket details?"
+msgstr ""
+
+#: helpdesk/models.py:1265
+msgid "Can Update Ticket?"
+msgstr ""
+
+#: helpdesk/models.py:1268
+msgid "Can this CC login and update the ticket?"
+msgstr ""
+
+#: helpdesk/models.py:1302
+msgid "Field Name"
+msgstr ""
+
+#: helpdesk/models.py:1303
+msgid ""
+"As used in the database and behind the scenes. Must be unique and consist"
+" of only lowercase letters with no punctuation."
+msgstr ""
+
+#: helpdesk/models.py:1309
+msgid "Label"
+msgstr ""
+
+#: helpdesk/models.py:1311
+msgid "The display label for this field"
+msgstr ""
+
+#: helpdesk/models.py:1315
+msgid "Help Text"
+msgstr ""
+
+#: helpdesk/models.py:1316
+msgid "Shown to the user when editing the ticket"
+msgstr ""
+
+#: helpdesk/models.py:1322
+msgid "Character (single line)"
+msgstr ""
+
+#: helpdesk/models.py:1323
+msgid "Text (multi-line)"
+msgstr ""
+
+#: helpdesk/models.py:1324
+msgid "Integer"
+msgstr ""
+
+#: helpdesk/models.py:1325
+msgid "Decimal"
+msgstr ""
+
+#: helpdesk/models.py:1326
+msgid "List"
+msgstr ""
+
+#: helpdesk/models.py:1327
+msgid "Boolean (checkbox yes/no)"
+msgstr ""
+
+#: helpdesk/models.py:1329
+msgid "Time"
+msgstr ""
+
+#: helpdesk/models.py:1330
+msgid "Date & Time"
+msgstr ""
+
+#: helpdesk/models.py:1332
+msgid "URL"
+msgstr ""
+
+#: helpdesk/models.py:1333
+msgid "IP Address"
+msgstr ""
+
+#: helpdesk/models.py:1338
+msgid "Data Type"
+msgstr ""
+
+#: helpdesk/models.py:1340
+msgid "Allows you to restrict the data entered into this field"
+msgstr ""
+
+#: helpdesk/models.py:1345
+msgid "Maximum Length (characters)"
+msgstr ""
+
+#: helpdesk/models.py:1351
+msgid "Decimal Places"
+msgstr ""
+
+#: helpdesk/models.py:1352
+msgid "Only used for decimal fields"
+msgstr ""
+
+#: helpdesk/models.py:1358
+msgid "Add empty first choice to List?"
+msgstr ""
+
+#: helpdesk/models.py:1360
+msgid ""
+"Only for List: adds an empty first entry to the choices list, which "
+"enforces that the user makes an active choice."
+msgstr ""
+
+#: helpdesk/models.py:1365
+msgid "List Values"
+msgstr ""
+
+#: helpdesk/models.py:1366
+msgid "For list fields only. Enter one option per line."
+msgstr ""
+
+#: helpdesk/models.py:1372
+msgid "Ordering"
+msgstr ""
+
+#: helpdesk/models.py:1373
+msgid "Lower numbers are displayed first; higher numbers are listed later"
+msgstr ""
+
+#: helpdesk/models.py:1387
+msgid "Required?"
+msgstr ""
+
+#: helpdesk/models.py:1388
+msgid "Does the user have to enter a value for this field?"
+msgstr ""
+
+#: helpdesk/models.py:1393
+msgid "Staff Only?"
+msgstr ""
+
+#: helpdesk/models.py:1394
+msgid ""
+"If this is ticked, then the public submission form will NOT show this "
+"field"
+msgstr ""
+
+#: helpdesk/models.py:1405
+msgid "Custom field"
+msgstr ""
+
+#: helpdesk/models.py:1406
+msgid "Custom fields"
+msgstr ""
+
+#: helpdesk/models.py:1428
+msgid "Ticket custom field value"
+msgstr ""
+
+#: helpdesk/models.py:1429
+msgid "Ticket custom field values"
+msgstr ""
+
+#: helpdesk/models.py:1441
+msgid "Ticket dependency"
+msgstr ""
+
+#: helpdesk/models.py:1442
+msgid "Ticket dependencies"
+msgstr ""
+
+#: helpdesk/models.py:1452
+msgid "Depends On Ticket"
+msgstr ""
+
+#: helpdesk/management/commands/create_usersettings.py:24
+msgid ""
+"Check for user without django-helpdesk UserSettings and create settings "
+"if required. Uses settings.DEFAULT_USER_SETTINGS which can be overridden "
+"to suit your situation."
+msgstr ""
+
+#: helpdesk/management/commands/escalate_tickets.py:150
+#, python-format
+msgid "Ticket escalated after %s days"
+msgstr ""
+
+#: helpdesk/management/commands/get_email.py:268
+msgid "Comment from e-mail"
+msgstr ""
+
+#: helpdesk/management/commands/get_email.py:274
+msgid "Unknown Sender"
+msgstr ""
+
+#: helpdesk/management/commands/get_email.py:328
+msgid "email_html_body.html"
+msgstr ""
+
+#: helpdesk/management/commands/get_email.py:341
+msgid ""
+"No plain-text email body available. Please see attachment "
+"\"email_html_body.html\"."
+msgstr ""
+
+#: helpdesk/management/commands/get_email.py:413
+#, python-format
+msgid "E-Mail Received from %(sender_email)ssender_email"
+msgstr ""
+
+#: helpdesk/management/commands/get_email.py:421
+#, python-format
+msgid "Ticket Re-Opened by E-Mail Received from %(sender_email)ssender_email"
+msgstr ""
+
+#: helpdesk/views/feeds.py:37
+#, python-format
+msgid "Helpdesk: Open Tickets in queue %(queue)s for %(username)s"
+msgstr ""
+
+#: helpdesk/views/feeds.py:42
+#, python-format
+msgid "Helpdesk: Open Tickets for %(username)s"
+msgstr ""
+
+#: helpdesk/views/feeds.py:48
+#, python-format
+msgid "Open and Reopened Tickets in queue %(queue)s for %(username)s"
+msgstr ""
+
+#: helpdesk/views/feeds.py:53
+#, python-format
+msgid "Open and Reopened Tickets for %(username)s"
+msgstr ""
+
+#: helpdesk/views/feeds.py:100
+msgid "Helpdesk: Unassigned Tickets"
+msgstr ""
+
+#: helpdesk/views/feeds.py:101
+msgid "Unassigned Open and Reopened tickets"
+msgstr ""
+
+#: helpdesk/views/feeds.py:125
+msgid "Helpdesk: Recent Followups"
+msgstr ""
+
+#: helpdesk/views/feeds.py:126
+msgid ""
+"Recent FollowUps, such as e-mail replies, comments, attachments and "
+"resolutions"
+msgstr ""
+
+#: helpdesk/views/feeds.py:141
+#, python-format
+msgid "Helpdesk: Open Tickets in queue %(queue)s"
+msgstr ""
+
+#: helpdesk/views/feeds.py:146
+#, python-format
+msgid "Open and Reopened Tickets in queue %(queue)s"
+msgstr ""
+
+#: helpdesk/views/public.py:86
+msgid "Invalid ticket ID or e-mail address. Please try again."
+msgstr ""
+
+#: helpdesk/views/public.py:102
+msgid "Submitter accepted resolution and closed ticket"
+msgstr ""
+
+#: helpdesk/views/public.py:123
+msgid "Missing ticket ID or e-mail address. Please try again."
+msgstr ""
+
+#: helpdesk/views/staff.py:287
+msgid "Accepted resolution and closed ticket"
+msgstr ""
+
+#: helpdesk/views/staff.py:435
+#, python-format
+msgid "Assigned to %(username)s"
+msgstr ""
+
+#: helpdesk/views/staff.py:461
+msgid "Updated"
+msgstr ""
+
+#: helpdesk/views/staff.py:489
+msgid "Owner"
+msgstr ""
+
+#: helpdesk/views/staff.py:662
+#, python-format
+msgid "Assigned to %(username)s in bulk updateusername"
+msgstr ""
+
+#: helpdesk/views/staff.py:672
+msgid "Unassigned in bulk update"
+msgstr ""
+
+#: helpdesk/views/staff.py:681 helpdesk/views/staff.py:691
+msgid "Closed in bulk update"
+msgstr ""
+
+#: helpdesk/views/staff.py:903
+msgid ""
+"<p><strong>Note:</strong> Your keyword search is case sensitive because "
+"of your database. This means the search will <strong>not</strong> be "
+"accurate. By switching to a different database system you will gain "
+"better searching! For more information, read the <a "
+"href=\"http://docs.djangoproject.com/en/dev/ref/databases/#sqlite-string-"
+"matching\">Django Documentation on string matching in SQLite</a>."
+msgstr ""
+
+#: helpdesk/views/staff.py:1014
+msgid "Ticket taken off hold"
+msgstr ""
+
+#: helpdesk/views/staff.py:1017
+msgid "Ticket placed on hold"
+msgstr ""
+
+#: helpdesk/views/staff.py:1154
+msgid "User by Priority"
+msgstr ""
+
+#: helpdesk/views/staff.py:1160
+msgid "User by Queue"
+msgstr ""
+
+#: helpdesk/views/staff.py:1167
+msgid "User by Status"
+msgstr ""
+
+#: helpdesk/views/staff.py:1173
+msgid "User by Month"
+msgstr ""
+
+#: helpdesk/views/staff.py:1179
+msgid "Queue by Priority"
+msgstr ""
+
+#: helpdesk/views/staff.py:1185
+msgid "Queue by Status"
+msgstr ""
+
+#: helpdesk/views/staff.py:1191
+msgid "Queue by Month"
+msgstr ""
+
+#: helpdesk/views/staff.py:1197
+msgid "Days until ticket closed by Month"
+msgstr ""
+
+#~ msgid "Description of Issue"
+#~ msgstr ""
+
+#~ msgid "Summary of your query"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Please be as descriptive as possible,"
+#~ " including any details we may need"
+#~ " to address your query."
+#~ msgstr ""
+
+#~ msgid "Urgency"
+#~ msgstr ""
+
+#~ msgid "Please select a priority carefully."
+#~ msgstr ""
+
+#~ msgid "E-mail me when a ticket is changed via the API?"
+#~ msgstr ""
+
+#~ msgid "If a ticket is altered by the API, do you want to receive an e-mail?"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "E-Mail server type for creating tickets"
+#~ " automatically from a mailbox - both"
+#~ " POP3 and IMAP are supported."
+#~ msgstr ""
+
+#~ msgid "Created from e-mail"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "No plain-text email body available. "
+#~ "Please see attachment email_html_body.html."
+#~ msgstr ""
+
+#~ msgid "E-Mail Received from %(sender_email)s"
+#~ msgstr ""
+
+#~ msgid "Ticket Re-Opened by E-Mail Received from %(sender_email)s"
+#~ msgstr ""
+
+#~ msgid " (Reopened)"
+#~ msgstr ""
+
+#~ msgid " (Updated)"
+#~ msgstr ""
+
+#~ msgid "<a href='https://github.com/rossp/django-helpdesk'>django-helpdesk</a>."
+#~ msgstr ""
+
+#~ msgid "Powered by django-helpdesk"
+#~ msgstr ""
+
+#~ msgid "My Open Tickets"
+#~ msgstr ""
+
+#~ msgid "All Recent Activity"
+#~ msgstr ""
+
+#~ msgid "Unassigned Tickets"
+#~ msgstr ""
+
+#~ msgid "Helpdesk"
+#~ msgstr ""
+
+#~ msgid "RSS Icon"
+#~ msgstr ""
+
+#~ msgid "RSS Feeds"
+#~ msgstr ""
+
+#~ msgid "API"
+#~ msgstr ""
+
+#~ msgid "System Settings"
+#~ msgstr ""
+
+#~ msgid "Delete Saved Query"
+#~ msgstr ""
+
+#~ msgid "Delete Query"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Are you sure you want to delete"
+#~ " this saved filter (<em>%(query_title)s</em>)?"
+#~ " To re-create it, you will need"
+#~ " to manually re-filter your ticket"
+#~ " listing."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You have shared this query, so "
+#~ "other users may be using it. If"
+#~ " you delete it, they will have "
+#~ "to manually create their own query."
+#~ msgstr ""
+
+#~ msgid "No, Don't Delete It"
+#~ msgstr ""
+
+#~ msgid "Yes - Delete It"
+#~ msgstr ""
+
+#~ msgid "Create Ticket"
+#~ msgstr ""
+
+#~ msgid "Submit a Ticket"
+#~ msgstr ""
+msgid "Submit a Ticket"
+msgstr "創建一個事項"
+
+#~ msgid "Unless otherwise stated, all fields are required."
+#~ msgstr ""
+msgid "Unless otherwise stated, all fields are required."
+msgstr "除了標示為 Optional 的欄位之外, 所有的欄位都需要填寫."
+
+#~ msgid "Please provide as descriptive a title and description as possible."
+#~ msgstr ""
+msgid "Please provide as descriptive a title and description as possible."
+msgstr "請盡可能把事項標題以及內容填寫清楚."
+
+#~ msgid "Submit Ticket"
+#~ msgstr ""
+msgid "Submit Ticket"
+msgstr "創建事項"
+
+#~ msgid "Helpdesk Dashboard"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Welcome to your Helpdesk Dashboard! From"
+#~ " here you can quickly see tickets "
+#~ "submitted by you, tickets you are "
+#~ "working on, and those tickets that "
+#~ "have no owner."
+#~ msgstr ""
+
+#~ msgid "Helpdesk Summary"
+#~ msgstr ""
+
+#~ msgid "Current Ticket Stats"
+#~ msgstr ""
+
+#~ msgid "Average number of days until ticket is closed (all tickets): "
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Average number of days until ticket "
+#~ "is closed (tickets opened in last "
+#~ "60 days): "
+#~ msgstr ""
+
+#~ msgid "Click"
+#~ msgstr ""
+
+#~ msgid "for detailed average by month."
+#~ msgstr ""
+
+#~ msgid "Distribution of open tickets, grouped by time period:"
+#~ msgstr ""
+
+#~ msgid "Days since opened"
+#~ msgstr ""
+
+#~ msgid "Number of open tickets"
+#~ msgstr ""
+
+#~ msgid "All Tickets submitted by you"
+#~ msgstr ""
+
+#~ msgid "Pr"
+#~ msgstr ""
+
+#~ msgid "Last Update"
+#~ msgstr ""
+
+#~ msgid "Open Tickets assigned to you (you are working on this ticket)"
+#~ msgstr ""
+
+#~ msgid "You have no tickets assigned to you."
+#~ msgstr ""
+
+#~ msgid "(pick up a ticket if you start to work on it)"
+#~ msgstr ""
+
+#~ msgid "Take"
+#~ msgstr ""
+
+#~ msgid "Delete"
+#~ msgstr ""
+
+#~ msgid "There are no unassigned tickets."
+#~ msgstr ""
+
+#~ msgid "Closed & resolved Tickets you used to work on"
+#~ msgstr ""
+
+#~ msgid "Delete Ticket"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Are you sure you want to delete"
+#~ " this ticket (<em>%(ticket_title)s</em>)? All "
+#~ "traces of the ticket, including "
+#~ "followups, attachments, and updates will "
+#~ "be irreversibly removed."
+#~ msgstr ""
+
+#~ msgid "Edit Ticket"
+#~ msgstr ""
+
+#~ msgid "Edit a Ticket"
+#~ msgstr ""
+
+#~ msgid "Note"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Editing a ticket does <em>not</em> send"
+#~ " an e-mail to the ticket owner "
+#~ "or submitter. No new details should "
+#~ "be entered, this form should only "
+#~ "be used to fix incorrect details "
+#~ "or clean up the submission."
+#~ msgstr ""
+
+#~ msgid "Save Changes"
+#~ msgstr ""
+
+#~ msgid "Ignore E-Mail Address"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To ignore an e-mail address and "
+#~ "prevent any emails from that address "
+#~ "creating tickets automatically, enter the "
+#~ "e-mail address below."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can either enter a whole "
+#~ "e-mail address such as "
+#~ "<em>email@domain.com</em> or a portion of "
+#~ "an e-mail address with a wildcard, "
+#~ "such as <em>*@domain.com</em> or "
+#~ "<em>user@*</em>."
+#~ msgstr ""
+
+#~ msgid "Delete Ignored E-Mail Address"
+#~ msgstr ""
+
+#~ msgid "Un-Ignore E-Mail Address"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Are you sure you wish to stop "
+#~ "removing this email address "
+#~ "(<em>%(email_address)s</em>) and allow their "
+#~ "e-mails to automatically create tickets "
+#~ "in your system? You can re-add "
+#~ "this e-mail address at any time."
+#~ msgstr ""
+
+#~ msgid "Keep Ignoring It"
+#~ msgstr ""
+
+#~ msgid "Stop Ignoring It"
+#~ msgstr ""
+
+#~ msgid "Ignored E-Mail Addresses"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "\n"
+#~ "<h2>Ignored E-Mail Addresses</h2>\n"
+#~ "\n"
+#~ "<p>The following e-mail addresses are "
+#~ "currently being ignored by the incoming"
+#~ " e-mail processor. You can <a "
+#~ "href='add/'>add a new e-mail address to"
+#~ " the list</a> or delete any of "
+#~ "the items below as required.</p>"
+#~ msgstr ""
+
+#~ msgid "Date Added"
+#~ msgstr ""
+
+#~ msgid "Keep in mailbox?"
+#~ msgstr ""
+
+#~ msgid "All"
+#~ msgstr ""
+
+#~ msgid "Keep"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "<strong>Note:</strong> If the 'Keep' option"
+#~ " is not selected, emails sent from"
+#~ " that address will be deleted "
+#~ "permanently."
+#~ msgstr ""
+
+#~ msgid "Edit followup"
+#~ msgstr ""
+
+#~ msgid "Edit FollowUp"
+#~ msgstr ""
+
+#~ msgid "Reassign ticket:"
+#~ msgstr ""
+
+#~ msgid "Title:"
+#~ msgstr ""
+
+#~ msgid "Comment:"
+#~ msgstr ""
+
+#~ msgid "Knowledgebase Category: %(kbcat)s"
+#~ msgstr ""
+
+#~ msgid "You are viewing all items in the %(kbcat)s category."
+#~ msgstr ""
+
+#~ msgid "Article"
+#~ msgstr ""
+
+#~ msgid "Knowledgebase"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "We have listed a number of "
+#~ "knowledgebase articles for your perusal "
+#~ "in the following categories. Please "
+#~ "check to see if any of these "
+#~ "articles address your problem prior to"
+#~ " opening a support ticket."
+#~ msgstr ""
+
+#~ msgid "Knowledgebase Categories"
+#~ msgstr ""
+
+#~ msgid "Knowledgebase: %(item)s"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "View <a href='%(category_url)s'>other "
+#~ "<em>%(category_title)s</em> articles</a>, or "
+#~ "continue <a href='../'>viewing other "
+#~ "knowledgebase articles</a>."
+#~ msgstr ""
+
+#~ msgid "Feedback"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "We give our users an opportunity "
+#~ "to vote for items that they "
+#~ "believe have helped them out, in "
+#~ "order for us to better serve "
+#~ "future customers. We would appreciate "
+#~ "your feedback on this article. Did "
+#~ "you find it useful?"
+#~ msgstr ""
+
+#~ msgid "This article was useful to me"
+#~ msgstr ""
+
+#~ msgid "This article was <strong>not</strong> useful to me"
+#~ msgstr ""
+
+#~ msgid "The results of voting by other readers of this article are below:"
+#~ msgstr ""
+
+#~ msgid "Recommendations: %(recommendations)s"
+#~ msgstr ""
+
+#~ msgid "Votes: %(votes)s"
+#~ msgstr ""
+
+#~ msgid "Overall Rating: %(score)s"
+#~ msgstr ""
+
+#~ msgid "Dashboard"
+#~ msgstr ""
+
+#~ msgid "New Ticket"
+#~ msgstr ""
+
+#~ msgid "Stats"
+#~ msgstr ""
+
+#~ msgid "Saved Query"
+#~ msgstr ""
+
+#~ msgid "Change password"
+#~ msgstr ""
+
+#~ msgid "Search..."
+#~ msgstr ""
+
+#~ msgid "Enter a keyword, or a ticket number to jump straight to that ticket."
+#~ msgstr ""
+
+#~ msgid "Logout"
+#~ msgstr ""
+
+#~ msgid "Log In"
+#~ msgstr ""
+
+#~ msgid "View a Ticket"
+#~ msgstr ""
+
+#~ msgid "Change the display language"
+#~ msgstr ""
+
+#~ msgid "Knowledgebase Articles"
+#~ msgstr ""
+
+#~ msgid "All fields are required."
+#~ msgstr ""
+
+#~ msgid "Please use button at upper right to login first."
+#~ msgstr ""
+
+#~ msgid "Your E-mail Address"
+#~ msgstr ""
+
+#~ msgid "View Ticket"
+#~ msgstr ""
+
+#~ msgid "Unable To Open Ticket"
+#~ msgstr ""
+
+#~ msgid "Sorry, but there has been an error trying to submit your ticket."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Our system has marked your submission"
+#~ " as <strong>spam</strong>, so we are "
+#~ "unable to save it. If this is "
+#~ "not spam, please press back and "
+#~ "re-type your message. Be careful to"
+#~ " avoid sounding 'spammy', and if you"
+#~ " have heaps of links please try "
+#~ "removing them if possible."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "We are sorry for any inconvenience, "
+#~ "however this check is required to "
+#~ "avoid our helpdesk resources being "
+#~ "overloaded by spammers."
+#~ msgstr ""
+
+#~ msgid "Error:"
+#~ msgstr ""
+
+#~ msgid "Queue: %(queue_name)s"
+#~ msgstr ""
+
+#~ msgid "Submitted On"
+#~ msgstr ""
+
+#~ msgid "Tags"
+#~ msgstr ""
+
+#~ msgid "Accept"
+#~ msgstr ""
+
+#~ msgid "Accept and Close"
+#~ msgstr ""
+
+#~ msgid "Follow-Ups"
+#~ msgstr ""
+
+#~ msgid "Changed %(field)s from %(old_value)s to %(new_value)s."
+#~ msgstr ""
+
+#~ msgid "Reports &amp; Statistics"
+#~ msgstr ""
+
+#~ msgid "You haven't created any tickets yet, so you cannot run any reports."
+#~ msgstr ""
+
+#~ msgid "Reports By User"
+#~ msgstr ""
+
+#~ msgid "by Priority"
+#~ msgstr ""
+
+#~ msgid "by Queue"
+#~ msgstr ""
+
+#~ msgid "by Status"
+#~ msgstr ""
+
+#~ msgid "by Month"
+#~ msgstr ""
+
+#~ msgid "Reports By Queue"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can run this query on filtered"
+#~ " data by using one of your "
+#~ "saved queries."
+#~ msgstr ""
+
+#~ msgid "Select Query:"
+#~ msgstr ""
+
+#~ msgid "Filter Report"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Want to filter this report to just"
+#~ " show a subset of data? Go to"
+#~ " the Ticket List, filter your query,"
+#~ " and save your query."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The following RSS feeds are available"
+#~ " for you to monitor using your "
+#~ "preferred RSS software. With the "
+#~ "exception of the 'Latest Activity' feed,"
+#~ " all feeds provide information only "
+#~ "on Open and Reopened cases. This "
+#~ "ensures your RSS reader isn't full "
+#~ "of information about closed or "
+#~ "historical tasks."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A summary of your open tickets -"
+#~ " useful for getting alerted to new"
+#~ " tickets opened for you"
+#~ msgstr ""
+
+#~ msgid "Latest Activity"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A summary of all helpdesk activity "
+#~ "- including comments, emails, attachments, "
+#~ "and more"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "All unassigned tickets - useful for "
+#~ "being alerted to new tickets opened "
+#~ "by the public via the web or "
+#~ "via e-mail"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "These RSS feeds allow you to view"
+#~ " a summary of either your own "
+#~ "tickets, or all tickets, for each "
+#~ "of the queues in your helpdesk. "
+#~ "For example, if you manage the "
+#~ "staff who utilise a particular queue,"
+#~ " this may be used to view new"
+#~ " tickets coming into that queue."
+#~ msgstr ""
+
+#~ msgid "Per-Queue Feeds"
+#~ msgstr ""
+
+#~ msgid "All Open Tickets"
+#~ msgstr ""
+
+#~ msgid "Open Tickets"
+#~ msgstr ""
+
+#~ msgid "Change System Settings"
+#~ msgstr ""
+
+#~ msgid "The following items can be maintained by you or other superusers:"
+#~ msgstr ""
+
+#~ msgid "E-Mail Ignore list"
+#~ msgstr ""
+
+#~ msgid "Maintain Queues"
+#~ msgstr ""
+
+#~ msgid "Maintain Pre-Set Replies"
+#~ msgstr ""
+
+#~ msgid "Maintain Knowledgebase Categories"
+#~ msgstr ""
+
+#~ msgid "Maintain Knowledgebase Items"
+#~ msgstr ""
+
+#~ msgid "Maintain E-Mail Templates"
+#~ msgstr ""
+
+#~ msgid "Maintain Users"
+#~ msgstr ""
+
+#~ msgid "View Ticket Details"
+#~ msgstr ""
+
+#~ msgid "Attach another File"
+#~ msgstr ""
+
+#~ msgid "Add Another File"
+#~ msgstr ""
+
+#~ msgid "Private"
+#~ msgstr ""
+
+#~ msgid "Respond to this ticket"
+#~ msgstr ""
+
+#~ msgid "Use a Pre-set Reply"
+#~ msgstr ""
+
+#~ msgid "(Optional)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Selecting a pre-set reply will "
+#~ "over-write your comment below. You "
+#~ "can then modify the pre-set reply"
+#~ " to your liking before saving this"
+#~ " update."
+#~ msgstr ""
+
+#~ msgid "Comment / Resolution"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can insert ticket and queue "
+#~ "details in your message. For more "
+#~ "information, see the <a "
+#~ "href='../../help/context/'>context help page</a>."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This ticket cannot be resolved or "
+#~ "closed until the tickets it depends "
+#~ "on are resolved."
+#~ msgstr ""
+
+#~ msgid "Is this update public?"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If this is public, the submitter "
+#~ "will be e-mailed your comment or "
+#~ "resolution."
+#~ msgstr ""
+
+#~ msgid "Change Further Details &raquo;"
+#~ msgstr ""
+
+#~ msgid "Unassign"
+#~ msgstr ""
+
+#~ msgid "Attach File(s) &raquo;"
+#~ msgstr ""
+
+#~ msgid "Attach a File"
+#~ msgstr ""
+
+#~ msgid "Update This Ticket"
+#~ msgstr ""
+
+#~ msgid "Add Ticket CC"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "\n"
+#~ "<h2>Add Ticket CC</h2>\n"
+#~ "\n"
+#~ "<p>To automatically send an email to "
+#~ "a user or e-mail address when this"
+#~ " ticket is updated, select the user"
+#~ " or enter an e-mail address "
+#~ "below.</p>"
+#~ msgstr ""
+
+#~ msgid "Save Ticket CC"
+#~ msgstr ""
+
+#~ msgid "Delete Ticket CC"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "\n"
+#~ "<h2>Delete Ticket CC</h2>\n"
+#~ "\n"
+#~ "<p>Are you sure you wish to delete"
+#~ " this email address (<em>%(email_address)s</em>)"
+#~ " from the CC list for this "
+#~ "ticket? They will stop receiving "
+#~ "updates.</p>\n"
+#~ msgstr ""
+
+#~ msgid "Don't Delete"
+#~ msgstr ""
+
+#~ msgid "Yes, Delete"
+#~ msgstr ""
+
+#~ msgid "Ticket CC Settings"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "\n"
+#~ "<h2>Ticket CC Settings</h2>\n"
+#~ "\n"
+#~ "<p>The following people will receive an"
+#~ " e-mail whenever <em><a "
+#~ "href='../'>%(ticket_title)s</a></em> is updated. "
+#~ "Some people can also view or edit"
+#~ " the ticket via the public ticket "
+#~ "views.</p>\n"
+#~ "\n"
+#~ "<p>You can <a href='add/'>add a new "
+#~ "e-mail address to the list</a> or "
+#~ "delete any of the items below as"
+#~ " required.</p>"
+#~ msgstr ""
+
+#~ msgid "Ticket CC List"
+#~ msgstr ""
+
+#~ msgid "View?"
+#~ msgstr ""
+
+#~ msgid "Update?"
+#~ msgstr ""
+
+#~ msgid "Return to <em>%(ticket_title)s</em>"
+#~ msgstr ""
+
+#~ msgid "Add Ticket Dependency"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "\n"
+#~ "<h2>Add Ticket Dependency</h2>\n"
+#~ "\n"
+#~ "<p>Adding a dependency will stop you "
+#~ "resolving this ticket until the "
+#~ "dependent ticket has been resolved or"
+#~ " closed.</p>"
+#~ msgstr ""
+
+#~ msgid "Save Ticket Dependency"
+#~ msgstr ""
+
+#~ msgid "Delete Ticket Dependency"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "\n"
+#~ "<h2>Delete Ticket Dependency</h2>\n"
+#~ "\n"
+#~ "<p>Are you sure you wish to remove the dependency on this ticket?</p>\n"
+#~ msgstr ""
+
+#~ msgid "Unhold"
+#~ msgstr ""
+
+#~ msgid "Hold"
+#~ msgstr ""
+
+#~ msgid "Queue: %(queue)s"
+#~ msgstr ""
+
+#~ msgid "Assigned To"
+#~ msgstr ""
+
+#~ msgid "Ignore"
+#~ msgstr ""
+
+#~ msgid "Copies To"
+#~ msgstr ""
+
+#~ msgid "Manage"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click here to add / remove people"
+#~ " who should receive an e-mail "
+#~ "whenever this ticket is updated."
+#~ msgstr ""
+
+#~ msgid "Subscribe"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click here to subscribe yourself to "
+#~ "this ticket, if you want to "
+#~ "receive an e-mail whenever this ticket"
+#~ " is updated."
+#~ msgstr ""
+
+#~ msgid "Dependencies"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This ticket cannot be resolved until "
+#~ "the following ticket(s) are resolved"
+#~ msgstr ""
+
+#~ msgid "Remove Dependency"
+#~ msgstr ""
+
+#~ msgid "This ticket has no dependencies."
+#~ msgstr ""
+
+#~ msgid "Add Dependency"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click on 'Add Dependency', if you "
+#~ "want to make this ticket dependent "
+#~ "on another ticket. A ticket may "
+#~ "not be closed until all tickets it"
+#~ " depends on are closed."
+#~ msgstr ""
+
+#~ msgid "Change Query"
+#~ msgstr ""
+
+#~ msgid "Sorting"
+#~ msgstr ""
+
+#~ msgid "Keywords"
+#~ msgstr ""
+
+#~ msgid "Date Range"
+#~ msgstr ""
+
+#~ msgid "Reverse"
+#~ msgstr ""
+
+#~ msgid "Ordering applied to tickets"
+#~ msgstr ""
+
+#~ msgid "Owner(s)"
+#~ msgstr ""
+
+#~ msgid "(ME)"
+#~ msgstr ""
+
+#~ msgid "Ctrl-Click to select multiple options"
+#~ msgstr ""
+
+#~ msgid "Queue(s)"
+#~ msgstr ""
+
+#~ msgid "Ctrl-click to select multiple options"
+#~ msgstr ""
+
+#~ msgid "Status(es)"
+#~ msgstr ""
+
+#~ msgid "Date (From)"
+#~ msgstr ""
+
+#~ msgid "Date (To)"
+#~ msgstr ""
+
+#~ msgid "Use YYYY-MM-DD date format, eg 2011-05-29"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Keywords are case-insensitive, and will"
+#~ " be looked for in the title, "
+#~ "body and submitter fields."
+#~ msgstr ""
+
+#~ msgid "Apply Filter"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You are currently viewing saved query"
+#~ " <strong>\"%(query_name)s\"</strong>."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "<a href='../reports/?saved_query=%(query_id)s'>Run a "
+#~ "report</a> on this query to see "
+#~ "stats and charts for the data "
+#~ "listed below."
+#~ msgstr ""
+
+#~ msgid "Save Query"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This name appears in the drop-down"
+#~ " list of saved queries. If you "
+#~ "share your query, other users will "
+#~ "see this name, so choose something "
+#~ "clear and descriptive!"
+#~ msgstr ""
+
+#~ msgid "Shared?"
+#~ msgstr ""
+
+#~ msgid "Yes, share this query with other users."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you share this query, it will"
+#~ " be visible by <em>all</em> other "
+#~ "logged-in users."
+#~ msgstr ""
+
+#~ msgid "Use Saved Query"
+#~ msgstr ""
+
+#~ msgid "Query"
+#~ msgstr ""
+
+#~ msgid "Run Query"
+#~ msgstr ""
+
+#~ msgid "No Tickets Match Your Selection"
+#~ msgstr ""
+
+#~ msgid "Previous"
+#~ msgstr ""
+
+#~ msgid "Page %(ticket_num)s of %(num_pages)s."
+#~ msgstr ""
+
+#~ msgid "Next"
+#~ msgstr ""
+
+#~ msgid "Select:"
+#~ msgstr ""
+
+#~ msgid "Inverse"
+#~ msgstr ""
+
+#~ msgid "With Selected Tickets:"
+#~ msgstr ""
+
+#~ msgid "Take (Assign to me)"
+#~ msgstr ""
+
+#~ msgid "Close"
+#~ msgstr ""
+
+#~ msgid "Close (Don't Send E-Mail)"
+#~ msgstr ""
+
+#~ msgid "Close (Send E-Mail)"
+#~ msgstr ""
+
+#~ msgid "Assign To"
+#~ msgstr ""
+
+#~ msgid "Nobody (Unassign)"
+#~ msgstr ""
+
+#~ msgid "Change User Settings"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Use the following options to change "
+#~ "the way your helpdesk system works "
+#~ "for you. These settings do not "
+#~ "impact any other user."
+#~ msgstr ""
+
+#~ msgid "Save Options"
+#~ msgstr ""
+
+#~ msgid "Logged Out"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "\n"
+#~ "<h2>Logged Out</h2>\n"
+#~ "\n"
+#~ "<p>Thanks for being here. Hopefully "
+#~ "you've helped resolve a few tickets "
+#~ "and make the world a better "
+#~ "place.</p>\n"
+#~ "\n"
+#~ msgstr ""
+
+#~ msgid "Helpdesk Login"
+#~ msgstr ""
+
+#~ msgid "To log in simply enter your username and password below."
+#~ msgstr ""
+
+#~ msgid "Your username and password didn't match. Please try again."
+#~ msgstr ""
+
+#~ msgid "Login"
+#~ msgstr ""
+
+#~ msgid "Assigned to %(username)s in bulk update"
+#~ msgstr ""
+
