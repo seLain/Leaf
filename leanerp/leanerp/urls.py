@@ -18,9 +18,12 @@ from django.contrib import admin
 
 from .views import index, logout
 
+import notifications.urls
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index),
     url(r'^logout/', logout),
-    url(r'^erpadmin/', include('erpadmin.urls')),
+    url(r'^erpadmin/', include('erpadmin.urls')),    
+    url(r'^inbox/notifications/', include(notifications.urls, namespace='notifications')),
 ]

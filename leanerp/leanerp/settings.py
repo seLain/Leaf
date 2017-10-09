@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 3rd party 
+    'rest_framework',
+    'notifications',
     # erp modules
     'erpadmin',
     'helpdesk',
@@ -128,3 +131,28 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, os.sep.join(['leanerp', 'leanerp', 'static'])).replace('\\', '/'),
     os.path.join(BASE_DIR, os.sep.join(['leanerp', 'erpadmin', 'static'])).replace('\\', '/'),
     ]
+
+# Setting for Django Notification to allow additional data attached
+NOTIFICATIONS_USE_JSONFIELD = True
+
+# Allows multiple projects to share a single database
+# * required by helpdesk
+SITE_ID = 1
+
+# Django Helpdesk settings
+# * overwrites the HELPDESK_DEFAULT_SETTINGS in helpdesk/settings.py
+HELPDESK_DEFAULT_SETTINGS = {
+        'use_email_as_submitter': False,
+        'email_on_ticket_assign': False,
+        'email_on_ticket_change': False,
+        'login_view_ticketlist': True,
+        'tickets_per_page': 25
+        }
+
+# Django-dbbackup settings
+DBBACKUP_STORAGE = 'django.core.files.storage.FileSystemStorage'
+DBBACKUP_STORAGE_OPTIONS = {'location': './sqlite_backups'}
+
+# Static file
+MEDIA_ROOT = 'media'
+MEDIA_URL = '/media/'
