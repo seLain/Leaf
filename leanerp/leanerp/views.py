@@ -5,10 +5,8 @@ from django.contrib import auth
 def index(request):
 
     if request.POST.get("login") and login(request):
-        print('aaa')
         return HttpResponseRedirect('/erpadmin/')
     elif request.POST.get("register"):
-        print('bbb')
         return HttpResponseRedirect('/erpadmin/register')
     
     return render(request, 'index.html', locals())
