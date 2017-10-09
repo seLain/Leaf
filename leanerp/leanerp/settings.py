@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # erp modules
     'erpadmin',
     'maintenance_mgmt',
+    'advertisement_mgmt',
 ]
 
 MIDDLEWARE = [
