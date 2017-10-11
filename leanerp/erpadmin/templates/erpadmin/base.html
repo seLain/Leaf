@@ -15,16 +15,16 @@
     
     {% load static %}
     <!-- Bootstrap Core CSS -->
-    <link href="{% static 'css/sb_admin2/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'erpadmin/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="{% static 'css/sb_admin2/metisMenu/metisMenu.min.css' %}" rel="stylesheet">
+    <link href="{% static 'erpadmin/vendor/metisMenu/metisMenu.min.css' %}" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="{% static 'css/sb_admin2/sb-admin-2.css' %}" rel="stylesheet">
+    <link href="{% static 'erpadmin/css/sb-admin-2.css' %}" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="{% static 'css/sb_admin2/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'erpadmin/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -220,29 +220,6 @@
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> 工作協助<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#">結帳工作 <span class="fa arrow"></span></a>
-                                    <ul class="nav nav-third-level">
-                                        <li>
-                                            <a href="/user/supplier_account/">廠商月結</a>
-                                        </li>
-                                        <li>
-                                            <a href="/user/supplier_account_rule/">更新月結規則</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">銷售工作 <span class="fa arrow"></span></a>
-                                    <ul class="nav nav-third-level">
-                                        <li>
-                                            <a href="/user/goods_sell_stats_direct.html">商品銷售統計</a>
-                                        </li>
-                                        <li>
-                                            <a href="/user/promotion.html">目前促銷</a>
-                                        </li>
-                                    </ul>
-                                    <!-- /.nav-third-level -->
-                                </li>
-                                <li>
                                     <a href="#">廣告管理 <span class="fa arrow"></span></a>
                                     <ul class="nav nav-third-level">
                                         <li>
@@ -254,44 +231,8 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-database fa-fw"></i> 資料庫管理<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="/user/database_backup.html">資料庫備份</span></a>
-                                </li>
-                                <li>
-                                    <a href="/user/database_manipulation.html">會員卡資料</span></a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-motorcycle fa-fw"></i> 系統巡查<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="/user/bug_member.html"> 會員資料巡查</span></a>
-                                </li>
-                                <li>
-                                    <a href="/user/bug_goods.html"> 商品資料巡查</span></a>
-                                </li>
-                                <li>
-                                    <a href="/user/routine_programs.html"> 定期程序</span></a>
-                                </li>
-                                <li>
-                                    <a href="/user/view_operating_log.html"> 操作紀錄</span></a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
                             <a href="#"><i class="fa fa-bank fa-fw"></i> 分店工作<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="/user/clerk_jobs.html"> 員工工作</span></a>
-                                </li>
-                                <li>
-                                    <a href="/user/send_clerk_message.html"> 發送提醒</span></a>
-                                </li>
                                 <li>
                                     <a href="/user/store_maintenance_mgmt.html"> 分店報修</span></a>
                                 </li>
@@ -325,19 +266,19 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="{% static 'css/sb_admin2/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'erpadmin/vendor/jquery/jquery.min.js' %}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="{% static 'css/sb_admin2/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'erpadmin/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="{% static 'css/sb_admin2/metisMenu/metisMenu.min.js' %}"></script>
+    <script src="{% static 'erpadmin/vendor/metisMenu/metisMenu.min.js' %}"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="{% static 'css/sb_admin2/sb-admin-2.js' %}"></script>
+    <script src="{% static 'erpadmin/js/sb-admin-2.js' %}"></script>
 
     <!-- Thirdparty JS Cookie Library -->
-    <script src="{% static 'javascripts/vendor/js.cookie.js' %}"></script>
+    <script src="{% static 'erpadmin/vendor/js-cookie/js.cookie.js' %}"></script>
 
     <!-- Notification JavaScript -->
     <script src="{% static 'notifications/notify.js' %}" type="text/javascript"></script>
