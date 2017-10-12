@@ -1,0 +1,136 @@
+{% extends 'erpadmin/base.html' %}
+{% load staticfiles%}   
+
+{% block css_content %}
+<!-- DataTables CSS -->
+<link href="{% static 'css/sb_admin2/datatables-plugins/dataTables.bootstrap.css' %}" rel="stylesheet">
+
+<!-- DataTables Responsive CSS -->
+<link href="{% static 'css/sb_admin2/datatables-responsive/dataTables.responsive.css' %}" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href="{% static 'css/sb_admin2/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+
+<link href="{% static 'css/jquery.fancybox.min.css' %}" rel="stylesheet" />
+
+{% endblock %}
+
+{% block page_content %}
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-md-push-8 col-md-4 col-xs-12">
+                <h4 class="page-header">建立廣告</h4>
+                <form action="/add_advertisement/" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="row">
+                            <label>分店</label>
+                            <select name="store_select" id="store_select">
+                            {% for name in stores %}
+                                <option value="{{ name }}">{{ name }}</option>
+                            {% endfor %}
+                            </select>
+                    </div>
+                    <div class="row">
+                            <label>廣告商</label>
+                            <select name="supplier_select" id="supplier_select" width="70%" style="width: 70%">
+                            {% for name in suppliers %}
+                                <option value="{{ name }}">{{ name }}</option>
+                            {% endfor %}
+                            </select>
+                    </div>
+                    <div class="row">
+                            <label>每月費用</label>
+                            <input required id="monthly_pay" name="monthly_pay" width="50%" style="width: 50%"></input>
+                            <label>$MOP</label>
+                    </div>
+                    <div class="row">
+                            <label>開始日期</label>
+                            <input required id="start_date" type="date" name="start_date"></input>
+                    </div>
+                    <div class="row">
+                            <label>結束日期</label>
+                            <input required id="end_date" type="date" name="end_date"></input>
+                    </div>
+                    <div class="row">
+                            <label>說明</label>
+                            <textarea required id="adv_description" name="adv_description" rows="3" cols="30"></textarea>
+                    </div>
+                    <div class="row">
+                            <label>上傳一張照片</label>
+                            <input required id="adv_image" type="file" class="" name="adv_image" width="70%" style="width: 70%"></input>
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="確定建立" style="float: right;"/>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-pull-4 col-md-8 col-xs-12">
+                <h4 class="page-header">當前廣告</h4>
+                <table id= "adv_list" width="100%" class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>分店</th>
+                            <th>廣告商</th>
+                            <th>每月費用</th>
+                            <th>結束日期</th>
+                            <th>圖片</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for adv in advertisements %}
+                            <tr>
+                                <td>{{adv.store}}</td>
+                                <td>{{adv.supplier}}<br/>TEL:{{adv.phone}}</td>
+                                <td>{{adv.monthly_pay}}</td>
+                                <td>{{adv.end_date|date:"Y-m-d g:i A"}}</td>
+                                <td width="15%">
+                                    <a href="{{adv.picture}}" data-fancybox="images" data-caption="My caption">
+                                        <image style="width: 100%" src="{{adv.picture}}" />
+                                    </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascript_content %}
+<!-- DataTables JavaScript -->
+<script src="{% static 'css/sb_admin2/datatables/js/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'css/sb_admin2/datatables-plugins/dataTables.bootstrap.min.js' %}"></script>
+<script src="{% static 'css/sb_admin2/datatables-responsive/dataTables.responsive.js' %}"></script>
+
+<!-- Supplier Account JavaScript -->
+<script src="{% static 'javascripts/supplier_account.js' %}?v=8"></script>
+
+<script src="{% static 'javascripts/vendor/jquery.fancybox.min.js' %}"></script>
+
+<!-- Page-Level Demo Scripts - Tables - Use for reference -->
+<script>
+$(document).ready(function() {
+    $('#adv_list').DataTable({
+        'responsive': true,
+        'bSort': true,
+        'aoColumns': [ 
+            { bSearchable: true, bSortable: false }, 
+            { bSearchable: true, bSortable: false }, 
+            { bSearchable: false, bSortable: false }, 
+            { bSearchable: false, bSortable: true }, 
+            { bSearchable: false, bSortable: false },  
+        ],
+        'searching': true,
+        'info': true,
+        'paging': true,
+        'language': {
+            'searchPlaceholder': "輸入:分店或廣告商關鍵字"
+        }
+    });
+});
+
+</script>
+{% endblock %}

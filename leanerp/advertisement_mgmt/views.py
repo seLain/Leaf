@@ -40,7 +40,7 @@ def advertisement_mgmt(request):
 						 'store': adv.store.name,
 						 'phone': adv.supplier.phone})
 
-	return render(request, 'control_panel/advertisement_mgmt.html', 
+	return render(request, 'advertisement_mgmt/advertisement_mgmt.html', 
 				  {'stores': [s.name for s in Store.objects.all()],
 				   'suppliers': suppliers,
 				   'advertisements': adv_data,})
