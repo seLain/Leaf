@@ -1,6 +1,11 @@
 from django.shortcuts import render
 from rest_framework.decorators import api_view
+from django.contrib.auth import get_user_model
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
+import json
 
+from .models import Clerk, ClerkMessage, ClerkMessageForm
 
 User = get_user_model()
 
@@ -45,4 +50,41 @@ def check_clerk_model_exist(user):
 			clerk.save()
 		except:
 			print("No store available when check_clerk_model_exist(user)")
+
+@login_required(login_url='/index/')
+@api_view(['POST'])
+def send_clerk_message(request):
+
+	# deal with submitted message
+	if 'content' in request.POST:
+		ClerkMessage(content=request.POST['content']).save()
+
+	# deal with message delete
+	if 'del_id' in request.POST:
+		try:
+			ClerkMessage.objects.get(id=request.POST['del_id']).delete()
+		except ClerkMessage.DoesNotExist:
+			print("ClerkMessage.DoesNotExist")
+
+	# prepare return message
+	message_form = ClerkMessageForm
+	messages = ClerkMessage.objects.all().order_by('-date')
+
+	return render(request, 'control_panel/send_clerk_message.html', {
+		          'message_form': message_form,
+		          'messages': messages})
+
+@api_view(['POST'])
+def update_clerk_messages(request):
+
+	messages = ClerkMessage.objects.all().order_by('-date')
+
+	msg_data = {'list': []}
+	for msg in messages:
+		msg_data['list'].append({
+			'content': msg.content,
+			})
+
+	return HttpResponse(json.dumps(msg_data), content_type="application/json")
+
 

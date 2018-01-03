@@ -1,4 +1,4 @@
-"""leanerp URL Configuration
+"""Arya URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -16,15 +16,10 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from .views import index, logout
-
-import notifications.urls
+from .views import verify_app_login, update_clerk_messages
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^$', index),
-    url(r'^logout/', logout),
-    url(r'^erpadmin/', include('erpadmin.urls')),
-    url(r'^inventorycheck/', include('inventorycheck.urls')),
-    url(r'^inbox/notifications/', include(notifications.urls, namespace='notifications')),
+    # Regular
+    url(r'^app_login', verify_app_login, name='app_login'),
+    url(r'^update_clerk_messages', update_clerk_messages, name='update_clerk_messages'),
 ]

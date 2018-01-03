@@ -1,5 +1,7 @@
 from django.db import models
 from datetime import datetime
+from django.utils import timezone
+from django import forms
 
 from advertisement_mgmt.models import Store
 from django.contrib.auth.models import User
@@ -43,3 +45,21 @@ class Task(models.Model):
 		permissions = (
 			("view_clerk_jobs", "permission to check jobs assigned to clerks"),
 		)
+
+class ClerkMessage(models.Model):
+
+	content = models.TextField(default='')
+	date = models.DateTimeField(default=timezone.now)
+
+	class Meta:
+		permissions = (
+			("send_clerk_message", "allows sending message to clerks"),
+		)
+
+class ClerkMessageForm(forms.ModelForm):
+	class Meta:
+		model = ClerkMessage
+		fields = ('content',)
+		widgets = {
+			'content': forms.TextInput(attrs={'style' : 'width:250px;'}),
+		}
