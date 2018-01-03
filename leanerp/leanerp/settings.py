@@ -42,9 +42,12 @@ INSTALLED_APPS = [
     'notifications',
     # erp modules
     'erpadmin',
+    'storehouse',
     'helpdesk',
     'maintenance_mgmt',
     'advertisement_mgmt',
+    'inventorycheck',
+    'customer_mgmt'
 ]
 
 MIDDLEWARE = [
