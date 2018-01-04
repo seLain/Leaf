@@ -15,9 +15,19 @@ class Goods(models.Model):
 		self.last_update_date = datetime.now()
 		super(Goods, self).save(*args, **kwargs)
 
+	def __str__(self):
+		return ' '.join([str(self.internal_code), 
+						 str(self.name),
+						 str(self.barcode)])
+
 class Supplier(models.Model):
 
 	internal_code = models.TextField(blank=True, primary_key=True)
 	name = models.TextField(blank=True)
 	phone = models.TextField(blank=True)
+
+	def __str__(self):
+		return ' '.join([str(self.internal_code), 
+						 str(self.name),
+						 str(self.phone)])
 
