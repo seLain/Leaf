@@ -16,11 +16,19 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from .views import verify_app_login, update_clerk_messages, send_clerk_message
+from .views import verify_app_login, update_clerk_messages, send_clerk_message, \
+                   regenerate_tasks, update_task ,report_inventory, inprogress_inventory, \
+                   update_done_task
 
 urlpatterns = [
-    # Regular
+    # Regular page
+    url(r'^update_clerk_messages', update_clerk_messages, name='update_clerk_messages'),
+    # API
     url(r'^app_login', verify_app_login, name='app_login'),
     url(r'^send_clerk_message', send_clerk_message, name='send_clerk_message'),
-    url(r'^update_clerk_messages', update_clerk_messages, name='update_clerk_messages'),
+    url(r'^regenerate_tasks', regenerate_tasks, name='regenerate_tasks'),
+    url(r'^update_task', update_task, name='update_task'),
+    url(r'^report_inventory', report_inventory, name='report_inventory'),
+    url(r'^inprogress_inventory', inprogress_inventory, name='inprogress_inventory'),
+    url(r'^update_done_task', update_done_task, name='update_done_task'),
 ]
