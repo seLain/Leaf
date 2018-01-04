@@ -16,10 +16,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from .views import verify_app_login, update_clerk_messages
+from .views import verify_app_login, update_clerk_messages, send_clerk_message
 
 urlpatterns = [
     # Regular
     url(r'^app_login', verify_app_login, name='app_login'),
+    url(r'^send_clerk_message', send_clerk_message, name='send_clerk_message'),
     url(r'^update_clerk_messages', update_clerk_messages, name='update_clerk_messages'),
 ]

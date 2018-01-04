@@ -1,0 +1,105 @@
+{% extends 'erpadmin/base.html' %}
+{% load staticfiles%}   <!-- To allow include css and javascript files inside blocks -->
+
+{% block css_content %}
+<!-- DataTables CSS -->
+<link href="{% static 'inventorycheck/vendor/datatables-plugins/dataTables.bootstrap.css' %}" rel="stylesheet">
+<!-- DataTables Responsive CSS -->
+<link href="{% static 'inventorycheck/vendor/datatables-responsive/dataTables.responsive.css' %}" rel="stylesheet">
+<!-- Custom Fonts -->
+<link href="{% static 'inventorycheck/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block page_content %}
+    
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h4 class="page-header">發送提醒</h4>
+                <form id="messageform" action="" method="post">
+                    {% csrf_token %}
+                    {{ message_form.as_table }}
+                    <button type="submit">發出</button>
+                </form>
+                <h4 class="page-header">已發出的提醒</h4>
+                <table id= "clerk_messages" width="100%" class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th width="20%">時間</th>
+                            <th>內容</th>
+                            <th width="10%">動作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for message in messages %}
+                            <tr>
+                                <td width="20%">{{message.date|date:"Y-m-d g:i A"}}</td>
+                                <td>{{message.content}}</td>
+                                <td width="10%">
+                                    <button target="_blank" 
+                                      class="delbtn btn btn-info pull-right" 
+                                      value={{message.id}}
+                                      href="">
+                                    刪除
+                                    </button>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+             </div>
+        </div>
+    </div>
+
+    <br/><br/><br/> <!-- [seLain] for page pretty printting, temporal, dirty -->
+{% endblock %}                  
+        
+{% block javascript_content %}
+<!-- DataTables JavaScript -->
+<script src="{% static 'inventorycheck/vendor/datatables/js/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'inventorycheck/vendor/datatables/js/dataTables.bootstrap.min.js' %}"></script>
+<script src="{% static 'inventorycheck/vendor/datatables-responsive/dataTables.responsive.js' %}"></script>
+
+<!-- Page-Level Demo Scripts - Tables - Use for reference -->
+<script>
+
+$(document).ready(function() {
+
+    var table = $('#clerk_messages').DataTable({
+        'responsive': true,
+        'bSort': false,
+        'aoColumns': [ 
+            { bSearchable: false, bSortable: false }, 
+            { bSearchable: true, bSortable: false }, 
+            { bSearchable: false, bSortable: false }, 
+        ],
+        'searching': true,
+        'info': true,
+        'paging': true,
+        'language': {
+            'searchPlaceholder': "輸入:內容關鍵字"
+        }
+    });
+});
+
+$(".delbtn").click(function () {
+      // send remove command
+      var id = $(this).attr('value');
+      $.ajax({
+        url: '/inventorycheck/send_clerk_message',
+        type: 'POST',
+        data: {
+          del_id: id,
+          csrfmiddlewaretoken: '{{ csrf_token }}'
+        },
+        dataType: 'json',
+      });
+      // update table
+      var table = $('#clerk_messages').DataTable();
+      $('#clerk_messages tbody').on('click', '.delbtn', function () {
+        table.row($(this).parents('tr')).remove().draw();
+      });
+});
+
+</script>
+{% endblock %}

@@ -52,7 +52,6 @@ def check_clerk_model_exist(user):
 			print("No store available when check_clerk_model_exist(user)")
 
 @login_required(login_url='/index/')
-@api_view(['POST'])
 def send_clerk_message(request):
 
 	# deal with submitted message
@@ -70,7 +69,7 @@ def send_clerk_message(request):
 	message_form = ClerkMessageForm
 	messages = ClerkMessage.objects.all().order_by('-date')
 
-	return render(request, 'control_panel/send_clerk_message.html', {
+	return render(request, 'inventorycheck/send_clerk_message.html', {
 		          'message_form': message_form,
 		          'messages': messages})
 
