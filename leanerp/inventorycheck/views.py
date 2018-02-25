@@ -3,11 +3,10 @@ from rest_framework.decorators import api_view
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
-from helpdesk.models import Queue, Ticket
 from django.db.models import Q
 from storehouse.models import Goods
 import json
-from datetime import datetime, timedelta
+from datetime import datetime
 
 from .models import Clerk, Task, ClerkMessage, ClerkMessageForm
 
@@ -39,7 +38,7 @@ def verify_app_login(request):
 			verification_data['verified'] = 'false'
 		#   CODE_MOCK
 	except User.DoesNotExist:
-		verification_data = {'verified': 'false', 
+		verification_data = {'verified': 'false',
 		                     'message': 'User.DoesNotExist'}
 	# SECTION_CODE
 
@@ -52,7 +51,7 @@ def check_clerk_model_exist(user):
 		try:
 			clerk.store = Store.objects.all()[0]
 			clerk.save()
-		except:
+		except IndexError:
 			print("No store available when check_clerk_model_exist(user)")
 
 @login_required(login_url='/index/')

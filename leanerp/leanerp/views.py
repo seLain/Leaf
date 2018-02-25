@@ -8,12 +8,12 @@ def index(request):
         return HttpResponseRedirect('/erpadmin/')
     elif request.POST.get("register"):
         return HttpResponseRedirect('/erpadmin/register')
-    
+
     return render(request, 'index.html', locals())
 
 def login(request):
 
-    if request.user.is_authenticated(): 
+    if request.user.is_authenticated():
         return HttpResponseRedirect('/')
 
     username = request.POST.get('username', '')

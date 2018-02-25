@@ -7,21 +7,15 @@ from .models import Maintenance
 from advertisement_mgmt.models import Store
 from django.contrib.auth.models import User
 from datetime import datetime, timedelta
-
 from notifications.signals import notify
 from notifications.models import Notification
-
 import json
-
-from lfmarket.roles import STORE_MAINTENANCE_MGMT
-from rolepermissions.verifications import has_permission
 from helpdesk.models import Ticket, Queue
 from operating_log.models import OperatingLog
 # Create your views here.
 
 @login_required(login_url='/index/')
 def store_maintenance_mgmt(request):
-	
 	if not request.user.has_perm("maintenance_mgmt.maintenance_mgmt"):
 		return render(request, 'control_panel/access_violation.html')
 
@@ -38,7 +32,7 @@ def store_maintenance_mgmt(request):
 						 	  'store': maintain.store.name,
 						 	  'validated': maintain.is_validated()})
 
-	return render(request, 'control_panel/store_maintenance_mgmt.html', 
+	return render(request, 'control_panel/store_maintenance_mgmt.html',
 				  {'stores': [s.name for s in Store.objects.all()],
 				   'maintainments': maintain_data,})
 
@@ -76,7 +70,7 @@ def add_store_maintenance(request):
 		# make notification
 		notify_new_maintenance()
 		# log to system
-		log = OperatingLog(date=maintain.create_date, 
+		log = OperatingLog(date=maintain.create_date,
 						   operator=request.user,
 						   on_module='maintenance_mgmt',
 						   description='新增了一筆'+store_select+'維修申請')
@@ -92,8 +86,8 @@ def notify_new_maintenance():
 								   		recipient=user,
 								   		verb='有新的維修申請').count() == 0:
 				print("create new")
-				notify.send(sender=user, 
-							recipient=user, 
+				notify.send(sender=user,
+							recipient=user,
 							verb='有新的維修申請',
 							href='/user/store_maintenance_mgmt.html')
 
@@ -123,7 +117,7 @@ def validate_store_maintenance(request):
 			mt.set_validated(validated, request.user)
 			mt.save()
 			# log to system
-			log = OperatingLog(date=mt.create_date, 
+			log = OperatingLog(date=mt.create_date,
 							   operator=request.user,
 							   on_module='maintenance_mgmt',
 							   description=':'.join(['審核了一筆維修申請', mt.store.name, mt.description]))

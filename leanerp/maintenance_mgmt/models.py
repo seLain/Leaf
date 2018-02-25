@@ -18,7 +18,7 @@ class Maintenance(models.Model):
 	discover_date = models.DateTimeField(default=timezone.now)
 	create_date = models.DateTimeField(default=timezone.now)
 	description = models.TextField(blank=True)
-	picture = models.ImageField(upload_to = ADV_IMAGE_BASE, 
+	picture = models.ImageField(upload_to = ADV_IMAGE_BASE,
 								default = DEFAULT_IMAGE,
 								blank=True,
 								null=True)

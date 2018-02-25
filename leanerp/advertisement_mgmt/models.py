@@ -1,9 +1,6 @@
 from django.db import models
-from datetime import datetime
 from django.utils import timezone
-
 from erpadmin.models import Supplier
-
 from .settings import ADV_IMAGE_BASE, DEFAULT_IMAGE
 
 # Create your models here.

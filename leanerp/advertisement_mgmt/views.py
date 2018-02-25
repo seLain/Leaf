@@ -2,22 +2,13 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
-from django.contrib.auth.models import User, Group
-
 from sellstats.models import Supplier
-
 from datetime import datetime, timedelta
-
 import json
-
 from .models import Advertisement, Store
-
 from notifications.signals import notify
 from notifications.models import Notification
-
 from operating_log.models import OperatingLog
-
-from lfmarket.roles import ADVERTISEMENT_MGMT
 from rolepermissions.verifications import has_permission
 # Create your views here.
 
@@ -40,7 +31,7 @@ def advertisement_mgmt(request):
 						 'store': adv.store.name,
 						 'phone': adv.supplier.phone})
 
-	return render(request, 'control_panel/advertisement_mgmt.html', 
+	return render(request, 'control_panel/advertisement_mgmt.html',
 				  {'stores': [s.name for s in Store.objects.all()],
 				   'suppliers': suppliers,
 				   'advertisements': adv_data,})
@@ -75,7 +66,7 @@ def add_advertisement(request):
 		adv.picture = image
 		adv.save()
 		# log to system
-		log = OperatingLog(date=adv.create_date, 
+		log = OperatingLog(date=adv.create_date,
 						   operator=request.user,
 						   on_module='advertisement_mgmt',
 						   description='新增了一筆'+store_select+'廣告紀錄')
@@ -94,13 +85,12 @@ def check_due_advertisement(request):
 	if len(ads) > 0:
 		for user in User.objects.all():
 			if user.has_perm("advertisement_mgmt.advertisement_mgmt") and \
-				Notification.objects.filter(unread=1, 
+				Notification.objects.filter(unread=1,
 									   		recipient=user,
 									   		verb='有即將到期的廣告').count() == 0:
-					notify.send(sender=user, 
-								recipient=user, 
+					notify.send(sender=user,
+								recipient=user,
 								verb='有即將到期的廣告',
 								href='/user/advertisement_mgmt.html')
 
 	return HttpResponse(json.dumps({}), content_type="application/json")
-
