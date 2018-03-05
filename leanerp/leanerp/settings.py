@@ -135,6 +135,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, os.sep.join(['leanerp', 'leanerp', 'static'])).replace('\\', '/'),
     os.path.join(BASE_DIR, os.sep.join(['leanerp', 'erpadmin', 'static'])).replace('\\', '/'),
     os.path.join(BASE_DIR, os.sep.join(['leanerp', 'inventorycheck', 'static'])).replace('\\', '/'),
+    os.path.join(BASE_DIR, os.sep.join(['leanerp', 'maintenance_mgmt', 'static'])).replace('\\', '/'),
     ]
 
 # Setting for Django Notification to allow additional data attached

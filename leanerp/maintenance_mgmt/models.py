@@ -2,7 +2,7 @@ from django.db import models
 from datetime import datetime
 from django.utils import timezone
 
-from advertisement_mgmt.models import Store
+from storehouse.models import Store
 from .settings import ADV_IMAGE_BASE, DEFAULT_IMAGE
 
 from django.contrib.auth.models import User

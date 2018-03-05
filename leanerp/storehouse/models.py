@@ -3,6 +3,9 @@ from datetime import datetime
 
 # Create your models here.
 
+class Store(models.Model):
+	name = models.TextField(primary_key=True)
+
 class Goods(models.Model):
 
 	barcode = models.TextField(blank=True, primary_key=True)

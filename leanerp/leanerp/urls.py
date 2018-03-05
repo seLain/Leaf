@@ -15,17 +15,24 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.views.static import serve
+from leanerp import settings
 
 from .views import index, logout
 
 import notifications.urls # refers to django-notifications-hq module
 
 urlpatterns = [
+    # Regular pages
     url(r'^admin/', admin.site.urls),
     url(r'^$', index),
     url(r'^logout/', logout),
     url(r'^erpadmin/', include('erpadmin.urls')),
+    url(r'^maintenance_mgmt/', include('maintenance_mgmt.urls')),
+    # APIs
     url(r'^inventorycheck/', include('inventorycheck.urls')),
     url(r'^inbox/notifications/', include(notifications.urls, namespace='notifications')),
     url(r'^api_v1/', include('api_v1.urls')),
+    # serving media files
+    url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]

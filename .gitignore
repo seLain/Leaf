@@ -103,3 +103,4 @@ ENV/
 # customized
 *.sqlite3
 /backend/*/migrations/
+/leanerp/media
