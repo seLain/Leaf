@@ -18,7 +18,7 @@ from django.contrib import admin
 
 from .views import index, logout
 
-import notifications.urls
+import notifications.urls # refers to django-notifications-hq module
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
