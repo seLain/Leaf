@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'maintenance_mgmt',
     'advertisement_mgmt',
     'inventorycheck',
-    'customer_mgmt'
+    'customer_mgmt',
+    'api_v1'
 ]
 
 MIDDLEWARE = [

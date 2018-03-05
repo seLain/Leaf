@@ -16,16 +16,9 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from .views import index, logout
-
-import notifications.urls
+from api_v1.views import get_queue_progress_api
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^$', index),
-    url(r'^logout/', logout),
-    url(r'^erpadmin/', include('erpadmin.urls')),
-    url(r'^inventorycheck/', include('inventorycheck.urls')),
-    url(r'^inbox/notifications/', include(notifications.urls, namespace='notifications')),
-    url(r'^api_v1/', include('api_v1.urls')),
+    # APIs
+    url(r'^get_queue_progress/', get_queue_progress_api),
 ]

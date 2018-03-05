@@ -289,7 +289,7 @@
 
         function load_queue_progress() {
             $.ajax({
-                url: '/get_queue_progress/',
+                url: '/api_v1/get_queue_progress/',
                 type: 'POST',
                 data: {
                   csrfmiddlewaretoken: '{{ csrf_token }}'
