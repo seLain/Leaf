@@ -11,7 +11,7 @@ from helpdesk.models import Ticket
 
 class Clerk(models.Model):
 	# one-to-one mapping to connect to real user of ERP system
-	real_user = models.ForeignKey(User, unique=True)
+	real_user = models.OneToOneField(User)
 	store = models.ForeignKey(Store, null=True)  # the beloning store
 
 class Task(models.Model):
