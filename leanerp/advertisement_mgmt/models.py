@@ -1,16 +1,9 @@
 from django.db import models
 from django.utils import timezone
-from erpadmin.models import Supplier
+from storehouse.models import Supplier
 from .settings import ADV_IMAGE_BASE, DEFAULT_IMAGE
-
+from storehouse.models import Store
 # Create your models here.
-
-class Store(models.Model):
-
-	ss8_id = models.TextField(default='', null=True)
-	ss12_id = models.TextField(default='', null=True)
-	name = models.TextField(primary_key=True)
-
 
 class Advertisement(models.Model):
 

@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^logout/', logout),
     url(r'^erpadmin/', include('erpadmin.urls')),
     url(r'^maintenance_mgmt/', include('maintenance_mgmt.urls')),
+    url(r'^advertisement_mgmt/', include('advertisement_mgmt.urls')),
     # APIs
     url(r'^inventorycheck/', include('inventorycheck.urls')),
     url(r'^inbox/notifications/', include(notifications.urls, namespace='notifications')),
